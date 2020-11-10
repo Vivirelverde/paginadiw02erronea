@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <meta>
+    <meta charset="UTF-8">
+    <title>Practica DIW02</title>
+  </meta>
+  <head>
+
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+
+  <body>
+    <div class="cabeceira"> Cafeteria Manolo</div>
+
+    <div class="corpo">
+        <!-- Columna do menu-->
+        <div class="columna col1">
+            <div class="menu">
+                <span> Menú</span>
+                <ul>
+                   
+
+                  <li> <div class="m2" onclick="javascript:location.href='index.php?opc=0';"> Inicio </div> </li>
+                  <li> <div class="m2" onclick="javascript:location.href='index.php?opc=1';"> Cafés </div> </li>
+                  <li> <div class="m2" onclick="javascript:location.href='index.php?opc=2';"> Licores </div> </li>
+                  <li> <div class="m2" onclick="javascript:location.href='index.php?opc=3';"> Vinos </div> </li>
+
+                  <li> <div class="m2" onclick="javascript:location.href='index.php?opc=5';"> Contacto </div> </li>
+
+                </ul> 
+            </div>
+
+            <div  class="mhorario">
+             <b> Horario: 10:00 - 19:00 </b>
+            </div>
+            <div style="margin-top: 40px; borde: 10px;" class="reserva">
+              <form>
+                Valoracións: <input type="text" id="valoracion" name="valoracion">  <br>
+                 <button type="submit" onclick="validarValoracion()">Enviar</button>
+              </form>
+            </div>
+
+        </div>
+        <!-- Columna de contidos-->
+        <div class="columna col2">
+            
+
+            <div class="noticia">
+                    <h2>Premio ao mellor local de santiago</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non dapibus dolor, eget tincidunt nisl. Nulla orci felis, aliquam vitae gravida eu, tincidunt euismod est. Nullam tempus, neque sed maximus pharetra, ipsum purus posuere nulla, sed laoreet lectus ante nec sem. Donec eget tristique neque, id ullamcorper quam. Curabitur accumsan lobortis quam, sit amet elementum risus facilisis vel. Curabitur lacinia sapien id nisi iaculis, eu pellentesque eros vestibulum. Duis a nibh elementum nisi interdum dignissim quis eget purus. Donec ac faucibus lorem. Praesent fermentum odio eget orci varius laoreet. Suspendisse tristique, libero in lobortis eleifend, enim sem viverra elit, vel sodales leo ante non ex. Sed eget sem sed ligula efficitur semper. Nulla sed neque sit amet metus porttitor commodo a ac eros. Cras fringilla viverra turpis vitae egestas. Nulla ac luctus nisl. Morbi quam ante, varius et hendrerit eu, molestie vitae sem.  </p>
+                    <p> Si quieres ler la noticia <a href="http://www.elcorreogallego.es">pincha aqui</a></p>
+                </div>
+
+            <div class="noticia">
+                 <h2>Participa en el sorteo de una cena </h2>
+                 <p> Cubre el siguiente formulario para participar</p>
+                  <form  >
+                    Tu nombre: <input type="text" id="nombre" name="nombre">  <br>
+                    Correo electronico: <input type="text" id="email" name="email"> <br>
+                    Telefono <input type="text" id="telf" name="telf"> <br>
+                   <a href="#" onclick="validarSorteo()"> Enviar para Participar </a>
+                  </form>
+             </div>
+
+             <div class="noticia">
+                <h2>Documental sobre los cafés</h2>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non dapibus dolor, eget tincidunt nisl. Nulla orci felis, aliquam vitae gravida eu, tincidunt euismod est. Nullam tempus, neque sed maximus pharetra, ipsum purus posuere nulla, sed laoreet lectus ante nec sem. Donec eget tristique neque, id ullamcorper quam. Curabitur accumsan lobortis quam, sit amet elementum risus facilisis vel. Curabitur lacinia sapien id nisi iaculis, eu pellentesque eros vestibulum. Duis a nibh elementum nisi interdum dignissim quis eget purus. Donec ac faucibus lorem. Praesent fermentum odio eget orci varius laoreet. Suspendisse tristique, libero in lobortis eleifend, enim sem viverra elit, vel sodales leo ante non ex. Sed eget sem sed ligula efficitur semper. Nulla sed neque sit amet metus porttitor commodo a ac eros. Cras fringilla viverra turpis vitae egestas. Nulla ac luctus nisl. Morbi quam ante, varius et hendrerit eu, molestie vitae sem.  </p>
+                <div>Reproducir vídeo realizado por la CRTVG</div>
+                <a href="http://www.crtvg.es/tvg/a-carta/vivir-aqu-533-4599634"> Clik aqui</a>
+            </div>
+
+        </div>
+
+
+        <!-- Columna de galeria de fotos-->
+        <div class="columna col3">
+            <p style="font-size: 1.3em;"> Galeria de cafés tipo ristretto</p>
+            <div class="contenGaleria">
+                <img src="cafe1.jpg" class="galeria" alt="Foto dun café italiano tipo ristretto">
+            </div>
+           
+            <div class="contenGaleria">
+                <img src="cafe2.jpg"  class="galeria" alt="Foto dun café italiano tipo ristretto" title="ristretto">
+
+            </div>
+
+            <div class="contenGaleria">
+                <img src="cafe3.jpg"  class="galeria" alt="Foto dun café italiano tipo ristretto"> 
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pe"> Todos os dereitos reservados</div>
+	
+	<script> 
+	
+	//Función para validar los campos del formulario de valoraciones
+	function validarValoracion(){
+		let valoracion = document.getElementById("valoracion").value.trim()
+		if(telf.length > 0 ) {
+			alert("Gracias por su valoración \n");
+		}else{
+			alert("La valoración tiene que contener un texto \n");
+			
+		}
+	}
+	//Función para validar los campos del formulario del sorteo
+	function validarSorteo(){
+	
+		let nombre = document.getElementById("nombre").value.trim()
+		let email= document.getElementById("email").value.trim();
+		let telf =  document.getElementById("telf").value.trim();
+		var salida="";
+		if(nombre.length <= 0 ) {
+			salida +="El campo nombre del formulario es obligatorio \n";
+		}
+		if(email.length <= 0 ) {
+			salida +="El campo e-mail del formulario es obligatorio \n";
+		}
+		if(telf.length <= 0 ) {
+			salida +="El campo teléfono del formulario es obligatorio \n";
+		}
+		
+		if(salida.length <= 0){
+			salida= "Gracias por participar";
+		}
+		
+		alert(salida);
+	}
+	</script>
+	
+
+
+  </body>
+</html>
